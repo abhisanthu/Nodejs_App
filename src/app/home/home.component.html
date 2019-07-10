@@ -1,0 +1,29 @@
+
+
+
+<table class="table table-striped">
+    <thead>
+
+    <th>Categories</th>
+    <th>Associated Products</th>
+    <th>No of Products</th>
+	<th>Billing Amount</th>
+    <th> Delete </th>
+
+    </thead>
+
+
+    <tbody>
+    <tr *ngFor="let categorydetails of name">
+
+       <td> {{ categorydetails.category_name }} </td>
+       <td> {{ categorydetails.products }}  </td>
+       <td> {{ categorydetails.products.length }}  </td>
+	   <td> Rs. {{ categorydetails.BillingAmount | number: '2.' }}  </td>
+       <td> <i class="fa fa-trash" (click)=deleteCategoty(categorydetails)></i>  </td>  
+
+    </tr>
+    </tbody>
+
+
+    </table>
